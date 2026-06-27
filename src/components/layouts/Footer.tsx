@@ -115,10 +115,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© 2025 CoreStack Technology. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
             <Link to="/admin/login" className="hover:text-foreground transition-colors">Admin</Link>
           </div>
         </div>

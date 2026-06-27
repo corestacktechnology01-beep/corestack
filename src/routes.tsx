@@ -12,6 +12,9 @@ import InternshipsPage from './pages/careers/InternshipsPage';
 import EndToEndServicesPage from './pages/EndToEndServicesPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 import UserProfilePage from './pages/UserProfilePage';
+import PrivacyPolicyPage from './pages/legal/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/legal/TermsOfServicePage';
+import CookiePolicyPage from './pages/legal/CookiePolicyPage';
 import ProgrammingQuizPage from './pages/challenges/ProgrammingQuizPage';
 import AptitudeQuizPage from './pages/challenges/AptitudeQuizPage';
 import DebugChallengePage from './pages/challenges/DebugChallengePage';
@@ -88,6 +91,9 @@ export const routes: RouteConfig[] = [
   { name: 'System Design', path: '/challenges/system-design', element: <SystemDesignPage />, public: true },
   { name: 'Leaderboard', path: '/leaderboard', element: <LeaderboardPage />, public: true },
   { name: 'My Profile', path: '/profile', element: <UserProfilePage />, public: true },
+  { name: 'Privacy Policy', path: '/privacy-policy', element: <PrivacyPolicyPage />, public: true },
+  { name: 'Terms of Service', path: '/terms-of-service', element: <TermsOfServicePage />, public: true },
+  { name: 'Cookie Policy', path: '/cookie-policy', element: <CookiePolicyPage />, public: true },
   { name: 'Admin Login', path: '/admin/login', element: <AdminLogin />, public: true },
 
   // ── Admin ────────────────────────────────────────────────────────────────────

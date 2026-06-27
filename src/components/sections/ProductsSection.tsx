@@ -17,7 +17,7 @@ const PRODUCTS = [
     badge: 'Most Popular',
     badgeColor: 'bg-primary/20 text-primary border-primary/30',
     features: ['Real-time Analytics & BI', 'AI-Powered Forecasting', 'Multi-Company Support', 'Mobile-First Design', 'Open API & Integrations', '99.9% Uptime SLA'],
-    price: 'From $299/mo',
+    price: 'From ₹24,700/mo',
     color: 'from-orange-500/10 to-amber-500/5',
     accent: 'border-primary/30',
     fields: ['company_size', 'use_case', 'current_tools', 'budget', 'timeline'],
@@ -29,7 +29,7 @@ const PRODUCTS = [
     badge: 'New Release',
     badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
     features: ['AI Lead Scoring', 'Sales Pipeline Automation', 'Email & WhatsApp Integration', 'Custom Reports & Dashboards', 'Team Collaboration Tools', 'Unlimited Contacts'],
-    price: 'From $149/mo',
+    price: 'From ₹12,300/mo',
     color: 'from-purple-500/10 to-indigo-500/5',
     accent: 'border-purple-500/20',
     fields: ['company_size', 'use_case', 'current_tools', 'budget', 'timeline'],
@@ -41,7 +41,7 @@ const PRODUCTS = [
     badge: 'Enterprise',
     badgeColor: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
     features: ['One-click Cloud Deployment', 'AI Anomaly Detection', 'Multi-Cloud Support', 'Security Scanning', 'Cost Optimization Engine', 'Team Access Controls'],
-    price: 'From $499/mo',
+    price: 'From ₹41,300/mo',
     color: 'from-blue-500/10 to-cyan-500/5',
     accent: 'border-blue-500/20',
     fields: ['company_size', 'use_case', 'current_tools', 'budget', 'timeline'],
@@ -194,10 +194,10 @@ function GetStartedModal({ product, onClose }: { product: Product; onClose: () =
                   <Select value={form.budget} onValueChange={v => set('budget', v)} disabled={loading}>
                     <SelectTrigger className="h-10 bg-muted/30"><SelectValue placeholder="Select budget" /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="under-500">Under $500/mo</SelectItem>
-                      <SelectItem value="500-1000">$500–$1,000/mo</SelectItem>
-                      <SelectItem value="1000-5000">$1,000–$5,000/mo</SelectItem>
-                      <SelectItem value="5000+">$5,000+/mo</SelectItem>
+                      <SelectItem value="under-500">Under ₹41,500/mo</SelectItem>
+                      <SelectItem value="500-1000">₹41,500–₹83,000/mo</SelectItem>
+                      <SelectItem value="1000-5000">₹83,000–₹4,15,000/mo</SelectItem>
+                      <SelectItem value="5000+">₹4,15,000+/mo</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

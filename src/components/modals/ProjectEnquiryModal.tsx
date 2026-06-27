@@ -28,8 +28,8 @@ const TECH_OPTIONS = [
   'TensorFlow', 'OpenAI', 'Docker', 'Kubernetes', 'Other',
 ];
 const BUDGETS = [
-  'Under $10,000', '$10,000 – $25,000', '$25,000 – $50,000',
-  '$50,000 – $100,000', '$100,000 – $250,000', '$250,000+', 'Not sure yet',
+  'Under ₹8,30,000', '₹8,30,000 – ₹20,75,000', '₹20,75,000 – ₹41,50,000',
+  '₹41,50,000 – ₹83,00,000', '₹83,00,000 – ₹2,07,50,000', '₹2,07,50,000+', 'Not sure yet',
 ];
 const TIMELINES = [
   '1–2 months', '3–4 months', '5–6 months', '6–12 months', '12+ months', 'Flexible',

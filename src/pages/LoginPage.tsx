@@ -221,7 +221,7 @@ export default function LoginPage() {
                 className="w-14 h-14 rounded-2xl flex items-center justify-center"
                 
               >
-                <img src="public/IMG_3354.PNG" alt="CoreStack Logo" className="w-15 h-15" />
+                <img src="public/images/IMG_3354.PNG" alt="CoreStack Logo" className="w-15 h-15" />
               </div>
               <div
                

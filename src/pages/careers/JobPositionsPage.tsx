@@ -144,8 +144,8 @@ function JobApplyModal({ job, open, onClose }: { job: Career | null; open: boole
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-1.5"><Label className="text-sm font-normal">Years of Experience</Label><Input placeholder="3 years" value={s3.experience_years} onChange={e => setS3(p => ({ ...p, experience_years: e.target.value }))} /></div>
               <div className="space-y-1.5"><Label className="text-sm font-normal">Current Company</Label><Input placeholder="Company Name (or N/A)" value={s3.current_company} onChange={e => setS3(p => ({ ...p, current_company: e.target.value }))} /></div>
-              <div className="space-y-1.5"><Label className="text-sm font-normal">Current Salary</Label><Input placeholder="$80,000 / year" value={s3.current_salary} onChange={e => setS3(p => ({ ...p, current_salary: e.target.value }))} /></div>
-              <div className="space-y-1.5"><Label className="text-sm font-normal">Expected Salary</Label><Input placeholder="$100,000 / year" value={s3.expected_salary} onChange={e => setS3(p => ({ ...p, expected_salary: e.target.value }))} /></div>
+              <div className="space-y-1.5"><Label className="text-sm font-normal">Current Salary</Label><Input placeholder="80,000 / year" value={s3.current_salary} onChange={e => setS3(p => ({ ...p, current_salary: e.target.value }))} /></div>
+              <div className="space-y-1.5"><Label className="text-sm font-normal">Expected Salary</Label><Input placeholder="100,000 / year" value={s3.expected_salary} onChange={e => setS3(p => ({ ...p, expected_salary: e.target.value }))} /></div>
               <div className="space-y-1.5"><Label className="text-sm font-normal">LinkedIn Profile</Label><Input placeholder="https://linkedin.com/in/..." value={s3.linkedin_url} onChange={e => setS3(p => ({ ...p, linkedin_url: e.target.value }))} /></div>
               <div className="space-y-1.5"><Label className="text-sm font-normal">Portfolio URL</Label><Input placeholder="https://myportfolio.com" value={s3.portfolio_url} onChange={e => setS3(p => ({ ...p, portfolio_url: e.target.value }))} /></div>
             </div>

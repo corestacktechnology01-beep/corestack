@@ -20,8 +20,8 @@ const INDUSTRIES = [
   'Manufacturing', 'Logistics', 'Real Estate', 'Education', 'Government', 'Other',
 ];
 const BUDGETS = [
-  'Under $10,000', '$10,000 – $25,000', '$25,000 – $50,000',
-  '$50,000 – $100,000', '$100,000 – $250,000', '$250,000+', 'Not sure yet',
+  'Under ₹8,30,000', '₹8,30,000 – ₹20,75,000', '₹20,75,000 – ₹41,50,000',
+  '₹41,50,000 – ₹83,00,000', '₹83,00,000 – ₹2,07,50,000', '₹2,07,50,000+', 'Not sure yet',
 ];
 const TIMELINES = ['Less than 1 month', '1–3 months', '3–6 months', '6–12 months', '12+ months', 'Flexible'];
 const TIME_SLOTS = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'];

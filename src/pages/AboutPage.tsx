@@ -123,9 +123,14 @@ function HeroBanner() {
         style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px,transparent 1px),linear-gradient(90deg,hsl(var(--border)) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
 
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto py-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-8">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Founded 2023 · Global Technology Partner
+        <div className="absolute left-0 top-0 ml-4 mt-4">
+          <BackButton />
+        </div>
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            Founded 2023 · Global Technology Partner
+          </div>
         </div>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-foreground leading-[0.95] mb-8 text-balance">
           Engineering
@@ -493,7 +498,7 @@ function Culture() {
   const { ref, visible } = useScrollVisible();
   const CULTURE_POINTS = [
     'Fully remote-friendly with hubs in 4 cities',
-    'Continuous learning & $2,000/year learning budget',
+    'Continuous learning & ₹1.66 lakh/year learning budget',
     'Bi-annual all-hands summits',
     'Open source contribution Fridays',
     '360° performance reviews with transparent criteria',
@@ -622,10 +627,6 @@ export default function AboutPage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        {/* Back button */}
-        <div className="container mx-auto px-4 max-w-7xl pt-24 pb-0">
-          <BackButton />
-        </div>
         <HeroBanner />
         <CompanyStory />
         <VisionMission />

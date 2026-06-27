@@ -305,7 +305,7 @@ export default function CareersSection() {
         <div className="grid sm:grid-cols-3 gap-4 mb-12">
           {[
             { icon: '🌍', title: 'Remote First', desc: 'Work from anywhere in the world, with flexible hours.' },
-            { icon: '📈', title: 'Growth & Learning', desc: '$5K annual learning budget + in-house mentorship programs.' },
+            { icon: '📈', title: 'Growth & Learning', desc: '₹4.15 lakh annual learning budget + in-house mentorship programs.' },
             { icon: '⚡', title: 'Cutting-Edge Tech', desc: "Build with the world's best tools on problems that matter." },
           ].map(item => (
             <div key={item.title} className="p-5 rounded-xl border border-border bg-card text-center">

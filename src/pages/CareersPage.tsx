@@ -21,7 +21,7 @@ const STATS = [
 const BENEFITS = [
   { icon: Monitor, title: 'Remote-First Culture', desc: 'Work from anywhere — home, co-working space, or our premium offices worldwide.', color: 'text-blue-400', bg: 'bg-blue-500/10' },
   { icon: TrendingUp, title: 'Accelerated Growth', desc: 'Semi-annual performance reviews with guaranteed promotions tied to impact, not tenure.', color: 'text-green-400', bg: 'bg-green-500/10' },
-  { icon: BookOpen, title: '$3,000 Learning Budget', desc: 'Annual stipend for courses, certifications, conferences, and technical books.', color: 'text-purple-400', bg: 'bg-purple-500/10' },
+  { icon: BookOpen, title: '₹2.49 lakh Learning Budget', desc: 'Annual stipend for courses, certifications, conferences, and technical books.', color: 'text-purple-400', bg: 'bg-purple-500/10' },
   { icon: Heart, title: 'Premium Healthcare', desc: 'Full family medical, dental, and vision coverage. Mental health support included.', color: 'text-rose-400', bg: 'bg-rose-500/10' },
   { icon: Coffee, title: 'Unlimited PTO', desc: 'We trust you to take time when you need it. No tracking, no questions asked.', color: 'text-amber-400', bg: 'bg-amber-500/10' },
   { icon: Zap, title: 'Equity Participation', desc: 'Join the ownership culture. All employees receive stock options from day one.', color: 'text-orange-400', bg: 'bg-orange-500/10' },
@@ -30,18 +30,18 @@ const BENEFITS = [
 ];
 
 const GROWTH_TIMELINE = [
-  { level: 'Junior Engineer', years: '0–2 yrs', salary: '$65K–$90K', desc: 'Onboarding, mentorship pairs, structured learning path, first product ownership.', color: 'bg-primary' },
-  { level: 'Mid-Level Engineer', years: '2–4 yrs', salary: '$90K–$130K', desc: 'Feature ownership, code review responsibilities, tech talks and mentoring juniors.', color: 'bg-blue-500' },
-  { level: 'Senior Engineer', years: '4–7 yrs', salary: '$130K–$175K', desc: 'Cross-team architecture decisions, leading sprints, client-facing technical discussions.', color: 'bg-green-500' },
-  { level: 'Staff Engineer / Tech Lead', years: '7–10 yrs', salary: '$175K–$220K', desc: 'Platform-wide technical vision, mentoring seniors, representing engineering to leadership.', color: 'bg-purple-500' },
-  { level: 'Principal / VP Engineering', years: '10+ yrs', salary: '$220K+', desc: 'Company-wide technical strategy, investor relations, external thought leadership.', color: 'bg-amber-500' },
+  { level: 'Junior Engineer', years: '0–2 yrs', salary: '₹54L–₹75L', desc: 'Onboarding, mentorship pairs, structured learning path, first product ownership.', color: 'bg-primary' },
+  { level: 'Mid-Level Engineer', years: '2–4 yrs', salary: '₹75L–₹1.08Cr', desc: 'Feature ownership, code review responsibilities, tech talks and mentoring juniors.', color: 'bg-blue-500' },
+  { level: 'Senior Engineer', years: '4–7 yrs', salary: '₹1.08Cr–₹1.46Cr', desc: 'Cross-team architecture decisions, leading sprints, client-facing technical discussions.', color: 'bg-green-500' },
+  { level: 'Staff Engineer / Tech Lead', years: '7–10 yrs', salary: '₹1.46Cr–₹1.83Cr', desc: 'Platform-wide technical vision, mentoring seniors, representing engineering to leadership.', color: 'bg-purple-500' },
+  { level: 'Principal / VP Engineering', years: '10+ yrs', salary: '₹1.83Cr+', desc: 'Company-wide technical strategy, investor relations, external thought leadership.', color: 'bg-amber-500' },
 ];
 
 const LEARNING_PROGRAMS = [
   { icon: Code2, title: 'CoreStack Academy', desc: '200+ internal video courses across engineering, design, and product management. Self-paced with certificates.', badge: 'Free' },
   { icon: Brain, title: 'AI & ML Bootcamp', desc: '12-week intensive program on machine learning, LLMs, and AI product development. Quarterly cohorts.', badge: 'Quarterly' },
   { icon: Award, title: 'Leadership Track', desc: 'Structured 6-month program for senior engineers transitioning into engineering management.', badge: '6 Months' },
-  { icon: Globe, title: 'Conference Budget', desc: '$2,000 annual allowance for external conferences — AWS re:Invent, Google I/O, KubeCon, and more.', badge: '$2K/yr' },
+  { icon: Globe, title: 'Conference Budget', desc: '₹1.66 lakh annual allowance for external conferences — AWS re:Invent, Google I/O, KubeCon, and more.', badge: '₹1.66L/yr' },
 ];
 
 const CULTURE_ITEMS = [

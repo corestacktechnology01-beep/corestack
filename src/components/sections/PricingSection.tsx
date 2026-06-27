@@ -93,12 +93,12 @@ export default function PricingSection() {
                     ) : (
                       <div>
                         <div className="flex items-end gap-1">
-                          <span className="text-muted-foreground text-lg">$</span>
+                          <span className="text-muted-foreground text-lg">₹</span>
                           <span className="text-4xl font-display font-bold gradient-text">{price.toLocaleString()}</span>
                           <span className="text-muted-foreground text-sm mb-1">/mo</span>
                         </div>
                         {billing === 'yearly' && plan.price_yearly && (
-                          <p className="text-xs text-muted-foreground mt-1">Billed as ${plan.price_yearly.toLocaleString()}/year</p>
+                          <p className="text-xs text-muted-foreground mt-1">Billed as ₹{plan.price_yearly.toLocaleString()}/year</p>
                         )}
                       </div>
                     )}

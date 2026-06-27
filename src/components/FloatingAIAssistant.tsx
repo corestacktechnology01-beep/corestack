@@ -66,7 +66,7 @@ function getBotResponse(input: string): BotResponse {
   };
 
   if (/price|pricing|cost|how much|budget|rate/.test(msg)) return {
-    text: "Our pricing is tailored to each project's scope and complexity. Here's a general guide:\n\n💰 **Basic Projects** — Starting from $10,000\n💼 **Mid-Market** — $25,000–$100,000\n🏢 **Enterprise** — $100,000–$500,000+\n\nFactors that affect pricing include timeline, team size, technology stack, and ongoing maintenance requirements.\n\n📅 **Book a free consultation** to get a precise, no-obligation proposal tailored to your exact requirements.",
+    text: "Our pricing is tailored to each project's scope and complexity. Here's a general guide:\n\n💰 **Basic Projects** — Starting from ₹8,30,000\n💼 **Mid-Market** — ₹20,75,000–₹83,00,000\n🏢 **Enterprise** — ₹83,00,000–₹4,15,00,000+\n\nFactors that affect pricing include timeline, team size, technology stack, and ongoing maintenance requirements.\n\n📅 **Book a free consultation** to get a precise, no-obligation proposal tailored to your exact requirements.",
     quickReplies: ['Book Consultation', 'Start a Project', 'Contact Sales'],
   };
 
