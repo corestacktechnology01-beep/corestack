@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X, ChevronDown, LogIn, Cpu, BriefcaseIcon, GraduationCap } from 'lucide-react';
+import { Menu, X, ChevronDown, LogIn, LogOut, UserCircle2, Cpu, BriefcaseIcon, GraduationCap } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -22,7 +23,7 @@ function Logo() {
   return (
     <Link to="/" className="flex items-center">
       <img
-        src="public/Logo.png"
+        src="/images/Logo.png"
         alt="CoreStack Technology"
         className="h-10 w-auto object-contain"
       />
@@ -31,20 +32,14 @@ function Logo() {
 }
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [careersOpen, setCareersOpen] = useState(false);
   const careersRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   useEffect(() => { document.documentElement.classList.add('dark'); }, []);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -70,7 +65,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass border-b border-border py-2' : 'bg-transparent py-2'}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass border-b border-border py-2">
       <div className="container mx-auto px-4 max-w-7xl flex items-center justify-between">
         <Logo />
 
@@ -113,13 +108,34 @@ export default function Header() {
 
         {/* Desktop actions */}
         <div className="hidden lg:flex items-center gap-2">
-          <Button
-            size="sm"
-            className="gap-1.5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-            onClick={() => navigate('/login')}
-          >
-            <LogIn className="w-3.5 h-3.5" /> Login
-          </Button>
+          {user ? (
+            <>
+              <Button
+                size="sm"
+                variant="outline"
+                className="gap-2 border-border text-foreground hover:border-primary/50"
+                onClick={() => navigate('/profile')}
+              >
+                <UserCircle2 className="w-4 h-4" /> Profile
+              </Button>
+              <Button
+                size="sm"
+                variant="ghost"
+                className="gap-2 text-muted-foreground hover:text-foreground"
+                onClick={() => signOut().then(() => navigate('/'))}
+              >
+                <LogOut className="w-4 h-4" /> Logout
+              </Button>
+            </>
+          ) : (
+            <Button
+              size="sm"
+              className="gap-1.5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              onClick={() => navigate('/login')}
+            >
+              <LogIn className="w-3.5 h-3.5" /> Login
+            </Button>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -157,13 +173,32 @@ export default function Header() {
                     </button>
                   ))}
                 </nav>
-                <div className="p-4">
-                  <Button
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
-                    onClick={() => { setMobileOpen(false); navigate('/login'); }}
-                  >
-                    <LogIn className="w-4 h-4" /> Login
-                  </Button>
+                <div className="p-4 space-y-2">
+                  {user ? (
+                    <>
+                      <Button
+                        className="w-full border-border text-foreground hover:border-primary/50 gap-2"
+                        variant="outline"
+                        onClick={() => { setMobileOpen(false); navigate('/profile'); }}
+                      >
+                        <UserCircle2 className="w-4 h-4" /> Profile
+                      </Button>
+                      <Button
+                        className="w-full text-muted-foreground hover:text-foreground gap-2"
+                        variant="ghost"
+                        onClick={() => { setMobileOpen(false); signOut().then(() => navigate('/')); }}
+                      >
+                        <LogOut className="w-4 h-4" /> Logout
+                      </Button>
+                    </>
+                  ) : (
+                    <Button
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
+                      onClick={() => { setMobileOpen(false); navigate('/login'); }}
+                    >
+                      <LogIn className="w-4 h-4" /> Login
+                    </Button>
+                  )}
                 </div>
               </div>
             </SheetContent>

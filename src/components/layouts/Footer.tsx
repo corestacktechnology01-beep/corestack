@@ -4,7 +4,7 @@ import { supabase } from '@/db/supabase';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-import { Twitter, Linkedin, Github, Instagram, Send, ArrowRight } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 const FOOTER_LINKS = {
   Company: [
@@ -28,13 +28,6 @@ const FOOTER_LINKS = {
     { label: 'Pricing Plans', href: '#pricing' },
   ],
 };
-
-const SOCIAL = [
-  { icon: Twitter, href: 'https://twitter.com/corestacktech', label: 'Twitter' },
-  { icon: Linkedin, href: 'https://linkedin.com/company/corestacktech', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/corestacktech', label: 'GitHub' },
-  { icon: Instagram, href: 'https://instagram.com/corestacktech', label: 'Instagram' },
-];
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -97,22 +90,6 @@ export default function Footer() {
                 <Send className="w-3.5 h-3.5" />
               </Button>
             </form>
-
-            {/* Social */}
-            <div className="flex items-center gap-2 mt-5">
-              {SOCIAL.map(s => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-8 h-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
-                >
-                  <s.icon className="w-3.5 h-3.5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Links columns */}
